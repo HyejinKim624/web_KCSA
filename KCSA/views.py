@@ -14,7 +14,7 @@ def tracklist(request):
     track = VoiceFile.objects.all()
 
     # 페이징처리
-    paginator = Paginator(track, 4)
+    paginator = Paginator(track, 6)
     try:                                
         track = paginator.page(page)
     except PageNotAnInteger:        # 페이지 번호가 없으면
