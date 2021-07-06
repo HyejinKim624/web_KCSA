@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <title>KCSA</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+        <link rel="stylesheet" href="{% static 'css/KCSA.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">KCSA</a></h1>
+            <h4><a>Korean Children's Speech Archive</a></h4>
+            <hr color="#363636"/>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

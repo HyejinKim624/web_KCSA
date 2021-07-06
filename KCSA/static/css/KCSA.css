@@ -1,0 +1,95 @@
+* {
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #363636;
+    font-size: 70pt;
+    text-decoration: none;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: -10px;
+}
+
+.page-header h4, .page-header h4 a, .page-header h4 a:visited, .page-header h4 a:active {
+    color: #363636;
+    font-size: 11pt;
+    text-decoration: none;
+    font-weight: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.col-md-8 {
+    width: 100%;
+}
+
+.instruction {
+    font-size: 11pt;
+    color: #363636;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.go_tracklist{
+    text-align: center;
+    position: fixed;
+    bottom: 50px;
+    left: 55px;
+    right: 55px;
+}
+
+.go_tracklist button{
+    background-color: #95b1d3;
+    color: #ffffff;
+    font-size: 11pt;
+    border-radius: 19px;
+    border: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.content {
+    font-size: 11pt;
+}
+
+.tracklist p {
+    font-size: 11pt;
+    font-weight: bolder;
+}
+
+audio {
+    width: 400px;
+    height: 22px;
+    margin-bottom: 33px;
+}
+
+.paging{
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
+    justify-content:center;
+    padding-left: 0;
+    display: flex;
+    list-style: none;
+}
+ 
+.paging li a{
+    border-style: none;
+    color: #363636;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+}
+ 
+.paging li a:hover{
+    color: #95b1d3;
+    background-color: #ffffff;
+}

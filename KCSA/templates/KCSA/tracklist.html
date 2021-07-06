@@ -1,0 +1,48 @@
+{% extends 'KCSA/base.html' %}
+
+{% block content %}
+    <div class="content">
+        <div class='tracklist'>
+            {% for vfile in track %}
+                <p>{{ vfile.id }}. {{ vfile.fname }}</p>
+                <audio controls src="/static/data/{{ vfile.fname }}.{{ vfile.fnExtension }}" type='audio/mp3'></audio>
+            {% endfor %}
+        </div>
+    </div>
+    <ul class="paging">
+        <!-- 이전페이지 -->
+        {% if posts.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ track.previous_page_number }}"> << </a>
+        </li>
+        {% endif %}
+        <!--이전페이지가 충분하지 않은경우-->
+        {% if posts.number > page_size|add:"1" %}
+            <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+            <li class="page-item"><span class="page-link" >...</span></li>
+        {% endif %}
+        <!-- 페이지리스트 -->
+        {% for page_number in page_range %}
+            {% if page_number == posts.number%}
+            <li class="page-item active" aria-current="page">
+                <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+            </li>
+            {% else %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+            </li>
+            {% endif %}
+        {% endfor %}
+        <!-- 다음페이지 -->
+        {% if posts.number|add:page_size < max_index %}
+            <li class="page-item"><span class="page-link" >...</span></li>
+            <li class="page-item"><a class="page-link" href="?page={{ max_index }}">{{ max_index }}</a></li>
+        {% endif %}
+     
+        {% if posts.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ track.next_page_number }}"> >> </a>
+        </li>
+        {% endif %}
+    </ul>    
+{% endblock %}
